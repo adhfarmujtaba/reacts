@@ -1,0 +1,318 @@
+// Define reusable colors and gradients
+$primary-color: #48a1f2; // Light blue for primary actions
+$secondary-color: #ff6b6b; // Soft red for secondary actions or highlights
+$background-color: #f9f9f9; // Light grey background for overall page
+$text-color: #333; // Dark grey for text for readability
+$border-color: #e2e2e2; // Light grey for borders and separations
+$hover-color: lighten($primary-color, 5%); // Slightly lighter primary color for hover states
+
+// Import font for a modern look
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+// Base styles for the profile page container
+.profile-page-container {
+  background-color: $background-color;
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  padding: 20px;
+
+  // Styles for the profile header section
+  .profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+
+    // Styles for the profile avatar
+    .profile-avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-right: 20px;
+      border: 3px solid $primary-color;
+      object-fit: cover;
+    }
+
+    // Styles for the profile information section
+    .profile-info {
+      // Styles for the profile username
+      .profile-username {
+        color: $text-color;
+        margin-bottom: 10px;
+      }
+
+      // Styles for the follower and following count
+      .profile-follow-count {
+        color: $secondary-color;
+        margin-bottom: 20px;
+      }
+
+      // Styles for the buttons
+      button {
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 500;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: $hover-color;
+        }
+      }
+
+      // Styles for the follow button
+      .follow-button {
+        background-color: $primary-color;
+        color: #fff;
+      }
+
+      // Styles for the unfollow button
+      .unfollow-button {
+        background-color: $secondary-color;
+        color: #fff;
+      }
+
+      // Styles for the login to follow button
+      .login-to-follow-button {
+        background-color: darken($background-color, 10%);
+        color: $text-color;
+      }
+    }
+  }
+
+  // Styles for the post list section
+  .post-list {
+    // Styles for the post list header
+    .post-list-header {
+      color: $text-color;
+      margin-bottom: 20px;
+    }
+
+    // Styles for the article cards
+    .article-card {
+      background-color: #fff;
+      border: 1px solid $border-color;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s;
+
+      &:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      // Styles for the image container
+      .image-container {
+        position: relative;
+      }
+
+      // Styles for the article thumbnail
+      .article-thumbnail {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+      }
+
+      // Styles for the overlay
+      .overlay {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 0.8rem;
+      }
+
+      // Styles for the article details
+      .article-details {
+        padding: 10px;
+
+        // Styles for the article title
+        .article-title {
+          margin-bottom: 10px;
+          color: $text-color;
+        }
+
+        // Styles for the post info
+        .post-info {
+          display: flex;
+          justify-content: space-between;
+          font-size: 12px;
+          color: darken($text-color, 20%);
+        }
+      }
+    }
+  }
+
+  // Styles for the post link
+  .post-link {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+// Styles for the custom skeleton loader
+.custom-skeleton-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  // Styles for the skeleton elements
+  .custom-skeleton-avatar, .custom-skeleton-thumbnail, .custom-skeleton-title, .custom-skeleton-text, .custom-skeleton-button {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+  }
+
+  // Styles for the avatar skeleton
+  .custom-skeleton-avatar {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    align-self: center;
+    border: 3px solid $primary-color;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    background-image: linear-gradient(90deg, #e0e0e0 0px, #f0f0f0 40px, #e0e0e0 80px);
+    background-size: 200px 100%;
+    animation: skeleton-loading-avatar 1.5s infinite ease-in-out;
+  }
+
+  // Styles for the profile information skeleton
+  .profilesk-info {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  // Styles for the line skeleton
+  .custom-skeleton-line {
+    width: 80%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin: 5px;
+    background-image: linear-gradient(90deg, #e0e0e0 0px, #f0f0f0 40px, #e0e0e0 80px);
+    background-size: 200px 100%;
+    animation: skeleton-loading 1.5s infinite ease-in-out;
+  }
+
+  // Styles for the thumbnail skeleton
+  .custom-skeleton-thumbnail {
+    width: 100%;
+    height: 180px;
+    margin-bottom: 10px;
+  }
+
+  // Styles for the title skeleton
+  .custom-skeleton-title {
+    height: 20px;
+    width: 70%;
+    margin: 0 auto 10px;
+  }
+
+  // Styles for the text skeleton
+  .custom-skeleton-text {
+    height: 10px;
+    width: 80%;
+    margin: 0 auto 10px;
+  }
+
+  // Styles for the button skeleton
+  .custom-skeleton-button {
+    width: 90px;
+    height: 30px;
+    align-self: center;
+    margin-top: 10px;
+  }
+
+  @keyframes skeleton-loading {
+    0% {
+      background-color: #e0e0e0;
+    }
+    50% {
+      background-color: #f0f0f0;
+    }
+    100% {
+      background-color: #e0e0e0;
+    }
+  }
+
+  .custom-skeleton-avatar, .custom-skeleton-thumbnail, .custom-skeleton-title, .custom-skeleton-text, .custom-skeleton-button {
+    animation: skeleton-loading 1.5s infinite ease-in-out;
+  }
+}
+
+// Dark mode styles
+@media (prefers-color-scheme: dark) {
+  $background-color-dark: #2c2c2c; // Dark background for overall page
+  $text-color-dark: #e0e0e0; // Light text color for readability in dark mode
+  $border-color-dark: #333; // Darker borders and separations in dark mode
+  $primary-color-dark: #1e90ff; // Adjusted primary color for dark mode
+  $secondary-color-dark: #ff6347; // Adjusted secondary color for dark mode
+ 
+  .profile-page-container {
+    background-color: $background-color-dark;
+    color: $text-color-dark;
+
+    .profile-header {
+      .profile-avatar {
+        border-color: $primary-color-dark;
+      }
+
+      .profile-info {
+        .profile-username,
+        .profile-follow-count,
+        button {
+          color: $text-color-dark;
+        }
+
+        .follow-button {
+          background-color: $primary-color-dark;
+          color: $text-color-dark;
+        }
+
+        .unfollow-button {
+          background-color: $secondary-color-dark;
+          color: $text-color-dark;
+        }
+
+        .login-to-follow-button {
+          background-color: darken($background-color-dark, 10%);
+         color: $text-color-dark;
+        }
+      }
+    }
+
+    .post-list {
+      .post-list-header {
+        color: $text-color-dark; // Ensure the header stands out in dark mode
+      }
+      .article-card {
+        background-color: #333;
+        border-color: $border-color-dark;
+        
+       
+
+        .article-details {
+          .article-title,
+          .post-info {
+            color: $text-color-dark;
+          }
+        }
+      }
+    }
+
+    .custom-skeleton-wrapper {
+      .custom-skeleton-avatar,
+      .custom-skeleton-thumbnail,
+      .custom-skeleton-title,
+      .custom-skeleton-text,
+      .custom-skeleton-button {
+        background-color: lighten($background-color-dark, 10%);
+        background-image: linear-gradient(90deg, lighten($background-color-dark, 10%) 0px, $background-color-dark 40px, lighten($background-color-dark, 10%) 80px);
+      }
+    }
+  }
+}

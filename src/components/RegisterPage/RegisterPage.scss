@@ -1,0 +1,94 @@
+// Define reusable colors and gradients
+$primary-color: #6c63ff; // A pleasant primary color
+$secondary-color: #ff6584; // A contrasting secondary color for buttons and links
+$background-gradient: linear-gradient(to right, #6c63ff, #ff6584); // A vibrant background gradient
+$text-color: #ffffff;
+$input-background: rgba(255, 255, 255, 0.2);
+$input-border-color: rgba(255, 255, 255, 0.4);
+$button-hover-color: darken($primary-color, 10%);
+
+
+
+// Register page styles
+.register-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  background: $background-gradient;
+  padding: 20px;
+
+  .back-arrow {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: black;
+    cursor: pointer;
+    font-size: 28px;
+  }
+
+  .register-form {
+    background-color: rgba(71, 71, 71, 0.642);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    padding: 40px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+
+    h2 {
+      color: $text-color;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .input-wrapper {
+      display: flex;
+      align-items: center;
+      background: $input-background;
+      border: 1px solid $input-border-color;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      padding: 10px;
+
+      svg {
+        margin-right: 10px;
+        color: $text-color;
+      }
+
+      input {
+        flex: 1;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: $text-color;
+        &::placeholder {
+          color: $text-color;
+        }
+      }
+    }
+
+    button#register_btn {
+      width: 100%;
+      background: $secondary-color;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      color: $text-color;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      
+      &:hover {
+        background-color: $button-hover-color;
+      }
+    }
+
+    .link {
+      color: $secondary-color;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

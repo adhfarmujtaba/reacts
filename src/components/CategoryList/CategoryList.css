@@ -1,0 +1,34 @@
+.no-posts-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Updated to a more neutral, widely used font */
+    color: #4A4A4A; /* Softened text color for better readability */
+    background-color: #F7F7F7; /* Soft background color */
+    padding: 20px; /* Padding to ensure content does not touch the edges */
+}
+
+.no-posts-message {
+    font-size: 24px; /* Increased font size for emphasis */
+    font-weight: 400; /* Regular font weight for a cleaner look */
+    margin-bottom: 30px; /* Increased spacing for better visual separation */
+    color: #333; /* Slightly darker color for the message for emphasis */
+}
+
+.no-posts-gif {
+    width: 80%; /* Max width limit for better control on large screens */
+    max-width: 500px; /* Maximum size to prevent the GIF from becoming too large */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Slightly increased rounded corners for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Media query for smaller devices */
+@media (max-width: 768px) {
+    .no-posts-gif {
+        width: 90%; /* More width on smaller screens for better visibility */
+    }
+}

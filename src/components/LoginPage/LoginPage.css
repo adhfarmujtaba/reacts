@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+.login-page * {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  background: linear-gradient(135deg, #4e54c8 0%, #8f94fb 100%), url("https://blog.tourismofkashmir.com/login_png/login.png");
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+}
+.login-page .back-arrow {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  color: #8f94fb;
+  cursor: pointer;
+  font-size: 24px;
+  transition: transform 0.2s;
+}
+.login-page .back-arrow:hover {
+  transform: scale(1.2);
+}
+.login-page .login-form {
+  background-color: rgba(3, 3, 3, 0.25);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 50px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.login-page .login-form:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+.login-page .login-form h2 {
+  color: #ffffff;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 500;
+}
+.login-page .login-form .input-wrapper {
+  position: relative;
+  margin-bottom: 30px;
+}
+.login-page .login-form .input-wrapper svg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15px;
+  color: #ffffff;
+}
+.login-page .login-form .input-wrapper input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  padding: 15px 15px 15px 45px;
+  color: #ffffff;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+.login-page .login-form .input-wrapper input:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: #8f94fb;
+}
+.login-page .login-form .input-wrapper input::-moz-placeholder {
+  color: white;
+}
+.login-page .login-form .input-wrapper input::placeholder {
+  color: white;
+}
+.login-page .login-form .login-button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #4e54c8, #8f94fb);
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s, transform 0.2s;
+}
+.login-page .login-form .login-button:hover {
+  background: #a8acfc;
+  transform: translateY(-5px);
+}
+.login-page .login-form .login-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+.login-page .login-form .login-help {
+  margin-top: 30px;
+  text-align: center;
+}
+.login-page .login-form .login-help p {
+  color: #ffffff;
+  margin: 5px 0;
+}
+.login-page .login-form .login-help p a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.login-page .login-form .login-help p a:hover {
+  color: #a8acfc;
+}/*# sourceMappingURL=LoginPage.css.map */
