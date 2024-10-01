@@ -13,6 +13,7 @@ import ProfilePage from './components/ProfilePage/ProfilePage';
 import ForgotPassword from './components/ForgotPassword/ForgotPassword';
 import ResetPassword from './components/ResetPassword/ResetPassword';
 import NoInternet from './components/NoInternet/NoInternet'; // Import NoInternet component
+import ScrollToTop from './components/ScrollToTop';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
@@ -71,6 +72,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <div className="App">
         <ToastContainer />
         {isOnline ? (
