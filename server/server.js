@@ -1,3 +1,4 @@
+// server/server.js
 import express from "express";
 import { render } from "./server"; // Import the render function
 
