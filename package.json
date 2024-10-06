@@ -4,6 +4,11 @@
   "proxy": "http://blog.tourismofkashmir.com",
   "private": true,
   "dependencies": {
+    "@babel/cli": "^7.25.7",
+    "@babel/core": "^7.25.7",
+    "@babel/preset-env": "^7.25.7",
+    "@babel/preset-react": "^7.25.7",
+    "@babel/register": "^7.25.7",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
@@ -18,10 +23,12 @@
     "axios": "^1.6.8",
     "bootstrap": "^5.3.3",
     "date-fns": "^3.6.0",
+    "express": "^4.21.0",
     "framer-motion": "^11.0.24",
+    "ignore-styles": "^5.0.1",
     "lodash": "^4.17.21",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react-dom": "^18.3.1",
     "react-helmet": "^6.1.0",
     "react-icons": "^5.0.1",
     "react-infinite-scroll-component": "^6.1.0",
@@ -34,10 +41,10 @@
     "tailwindcss": "^3.4.3",
     "web-vitals": "^2.1.4"
   },
-  "devDependencies": {},
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "ssr": "npm run build && node server/index.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
